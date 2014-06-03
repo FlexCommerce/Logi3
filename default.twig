@@ -1,0 +1,30 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<header class="bk-header">
+  <div class="clearfix logo-sz">
+    <div class="wrapper">
+      <div class="companyheader clearfix">
+        {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+      </div>
+    </div>
+  </div>
+  <div class="clearfix menu-sz">
+    <nav class="wrapper clearfix nav-sz">
+      {{widget('extendednavigation', 'navigationheader', {})|raw}}
+    </nav>
+  </div>
+</header>
+<div class="main wrapper clearfix">
+    {{zone('main')|raw}}
+</div>
+<section>
+  <div class="copy-sz">
+    <div class="wrapper clearfix f-socialicons">
+      {{widget('content', 'copy-s1', {"content":"<p>Infinite 2014  all rights reserved</p>"})|raw}}
+      {{widget('profile', 'f-socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+    </div>
+  </div>
+</section>
+{% endblock %}
